@@ -1,4 +1,7 @@
-Temas puntuales
+En este curso, se construirá y se hará funcionar una aplicación web. Primero, se creara interfaces dinámicas con rutas anidadas, componentes y Tailwind/DaisyUI. Luego, conectaremos a datos usando servicios, peticiones HTTP, operadores de RXJS y señales para gestionar el estado de la aplicación.
+
+
+Temas puntuales 1
 En esta sección aprenderemos y reforzaremos temas como:
 
   Rutas hijas
@@ -14,3 +17,26 @@ En esta sección aprenderemos y reforzaremos temas como:
   Carga perezosa de módulos de rutas
 
 El objetivo es armar la aplicación que luego haremos funcionar.
+
+Temas puntuales 2
+En esta sección aprenderemos a trabajar con:
+
+  Recursos como:
+
+  Resources
+
+  rxResources
+
+  Señales
+
+  Servicios
+
+  Reutilización de componentes
+
+  Peticiones http
+
+  Operadores de RXJS
+
+  Mucho más
+
+La idea es hacer funcionar nuestra aplicación

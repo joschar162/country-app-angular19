@@ -1,6 +1,9 @@
-<h1 class="text-3xl font-bold underline">Hola Dev</h1>
-<p class="mt-4 text-lg text-gray-600">
-  Bienvenido a tu aplicación Angular con Tailwind CSS!
-</p>
-<br />
-<button class="btn btn-primary">Button</button>
+<main class="m-auto flex-grow flex flex-col min-h-screen">
+  <router-outlet></router-outlet>
+
+  <!-- Este div asegura que el <app-footer> permanezca siempre en la parte inferior de la página -->
+  <div class="flex-1 flex-grow"></div>
+  <!-- footer start -->
+  <app-footer></app-footer>
+  <!-- footer end -->
+</main>
