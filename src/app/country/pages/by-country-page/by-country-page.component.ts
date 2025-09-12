@@ -4,7 +4,7 @@ import { CountryListTableComponent } from '../../components/country-list-table/c
 
 @Component({
   selector: 'by-country-page',
-  imports: [CountrySearchInputComponent, CountryListTableComponent],
+  imports: [CountrySearchInputComponent],
   templateUrl: './by-country-page.component.html',
 })
 export class ByCountryPageComponent {
