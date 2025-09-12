@@ -2,9 +2,9 @@
 <section>
   <app-country-search-input
     placeholder="Buscar por capital"
+    (value)="onSearch($event)"
   ></app-country-search-input>
 </section>
-
 <!-- country-table-list -->
 <section class="mt-5">
   <app-country-list-table></app-country-list-table>
