@@ -2,15 +2,15 @@
 <section>
   <app-country-search-input
     placeholder="Buscar por capital"
-    (value)="onSearch($event)"
-  ></app-country-search-input>
+    (value)="query.set($event)"
+  />
 </section>
 <!-- country-table-list -->
 
 <section class="mt-5">
-  @if (isError()) {
-  <h3>{{ isError() }}</h3>
-  }@else{
-  <app-country-list-table [countries]="countries()"></app-country-list-table>
+  @if (countryResource.error()) {
+  <h3>{{ countryResource.error() }}</h3>
+  }@if(countryResource.hasValue()){
+  <app-country-list-table [countries]="countryResource.value()!" />
   }
 </section>
