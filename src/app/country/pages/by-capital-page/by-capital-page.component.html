@@ -6,6 +6,11 @@
   ></app-country-search-input>
 </section>
 <!-- country-table-list -->
+
 <section class="mt-5">
+  @if (isError()) {
+  <h3>{{ isError() }}</h3>
+  }@else{
   <app-country-list-table [countries]="countries()"></app-country-list-table>
+  }
 </section>
