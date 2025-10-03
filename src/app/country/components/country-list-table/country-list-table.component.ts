@@ -12,4 +12,7 @@ import { DecimalPipe } from '@angular/common';
 export class CountryListTableComponent {
   // countryService = inject(CountryService);
   countries = input.required<Country[]>();
+  errorMessage = input<string | unknown | null>();
+  isLoading = input<boolean>(false);
+  isEmpty = input<boolean>(false);
 }
