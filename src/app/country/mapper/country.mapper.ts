@@ -1,4 +1,3 @@
-import { count } from 'rxjs';
 import { Country } from '../interfaces/country.interface';
 import { RESTCountry } from '../interfaces/rest-country.interfaces';
 
@@ -10,7 +9,7 @@ export class CountryMapper {
       flag: country.flags.png,
       flagSvg: country.flags.svg,
       name: country.translations['spa'].official,
-      capital: country.capital.join(', '),
+      capital: country.capital?.join(', ') || '',
       population: country.population,
     };
   }

@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { RESTCountry } from '../interfaces/rest-country.interfaces';
 import { map, Observable, catchError, throwError } from 'rxjs';
@@ -24,6 +24,24 @@ export class CountryService {
         console.log(error);
         return throwError(
           () => new Error(`no se pudo  obtener país con ese capital: ${query}`)
+        );
+      })
+    );
+  }
+
+  searchByCountry(query: string): Observable<Country[]> {
+    query = query.toLowerCase();
+    const url = `${API_URL}/name/${query}`;
+
+    return this.http.get<RESTCountry[]>(url).pipe(
+      map(
+        (restCountry) =>
+          CountryMapper.mapRestCountryArrayToCountryArray(restCountry) // map(CountryMapper.mapRestCountryArrayToCountryArray) //equivale a la linea siguiente
+      ),
+      catchError((error) => {
+        console.log(error);
+        return throwError(
+          () => new Error(`no se pudo  obtener país con ese nombre: ${query}`)
         );
       })
     );

@@ -5,12 +5,12 @@
     (value)="query.set($event)"
   />
 </section>
-<!-- country-table-list -->
 
+<!-- country-table-list -->
 <section class="mt-5">
   @if (countryResource.error()) {
   <h3>{{ countryResource.error() }}</h3>
-  }@if(countryResource.hasValue()){
+  } @if(countryResource.hasValue()){
   <app-country-list-table [countries]="countryResource.value()!" />
   }
 </section>

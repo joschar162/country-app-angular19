@@ -2,10 +2,15 @@
 <section>
   <app-country-search-input
     placeholder="Buscar por País"
+    (value)="query.set($event)"
   ></app-country-search-input>
 </section>
 
 <!-- country-table-list -->
 <section class="mt-5">
-  <!-- <app-country-list-table></app-country-list-table> -->
+  @if (countryResource.error()) {
+  <h3>{{ countryResource.error() }}</h3>
+  } @if(countryResource.hasValue()){
+  <app-country-list-table [countries]="countryResource.value()!" />
+  }
 </section>
