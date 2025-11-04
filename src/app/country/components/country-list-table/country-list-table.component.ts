@@ -3,10 +3,11 @@ import { CountryService } from '../../services/country.service';
 import { RESTCountry } from '../../interfaces/rest-country.interfaces';
 import type { Country } from '../../interfaces/country.interface';
 import { DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-country-list-table',
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, RouterLink],
   templateUrl: './country-list-table.component.html',
 })
 export class CountryListTableComponent {

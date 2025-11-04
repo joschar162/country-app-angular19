@@ -1,1 +1,13 @@
-<p>country-page works!</p>,
+@if (countryResource.error()) {
+<app-not-found />
+}
+<!-- ********-->
+
+@if (countryResource.isLoading()) { }
+<!--   -->
+@if (countryResource.hasValue()) {
+
+<country-information-page
+  [country]="countryResource.value()!"
+></country-information-page>
+}
